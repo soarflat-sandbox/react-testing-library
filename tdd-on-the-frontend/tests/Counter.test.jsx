@@ -1,0 +1,18 @@
+import React from 'react';
+import { render, cleanup } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+
+import { Counter } from '../src/Counter';
+
+// テスト実行後に DOM を unmount、cleanup する
+afterEach(cleanup);
+
+describe('Counter', () => {
+  it('初期状態は0である', () => {
+    const { getByTestId } = render(<Counter />);
+    const element = getByTestId('result');
+    expect(element).toHaveTextContent('0');
+  });
+  it.todo('「+」ボタンを押すと１つカウントアップする');
+  it.todo('「-」ボタンを押すと１つカウントダウンする');
+});
