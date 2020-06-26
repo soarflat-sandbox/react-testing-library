@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import { Counter } from '../src/Counter';
@@ -14,6 +14,20 @@ describe('Counter', () => {
     const element = getByTestId('result');
     expect(element).toHaveTextContent('0');
   });
-  it.todo('「+」ボタンを押すと１つカウントアップする');
-  it.todo('「-」ボタンを押すと１つカウントダウンする');
+
+  it('「+」ボタンを押すと１つカウントアップする', () => {
+    const { getByTestId, getByText } = render(<Counter />);
+    const element = getByTestId('result');
+    const increseButton = getByText('+');
+    fireEvent.click(increseButton);
+    expect(element).toHaveTextContent('1');
+  });
+
+  it('「-」ボタンを押すと１つカウントダウンする', () => {
+    const { getByTestId, getByText } = render(<Counter />);
+    const element = getByTestId('result');
+    const decreseButton = getByText('-');
+    fireEvent.click(decreseButton);
+    expect(element).toHaveTextContent('-1');
+  });
 });
