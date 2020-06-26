@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export function Counter() {
-  return <div data-testid="result">0</div>;
+  const [count] = useState(0);
+
+  return <div data-testid="result">{count}</div>;
 }

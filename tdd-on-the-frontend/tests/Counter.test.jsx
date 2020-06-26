@@ -10,6 +10,7 @@ afterEach(cleanup);
 describe('Counter', () => {
   it('初期状態は0である', () => {
     const { getByTestId } = render(<Counter />);
+    // 要素を取得する。document.body.querySelector(`[data-testid="result"]`) とほとんど等価。
     const element = getByTestId('result');
     expect(element).toHaveTextContent('0');
   });
