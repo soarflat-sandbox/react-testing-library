@@ -9,6 +9,9 @@ afterEach(cleanup);
 
 describe('Counter', () => {
   it('初期状態は0である', () => {
+    // document.body に <Counter /> をレンダリングする
+    // render を実行すると DOM Testing Library の Queries などを返却する
+    // getByTestId は Queries の１つ
     const { getByTestId } = render(<Counter />);
     // 要素を取得する。document.body.querySelector(`[data-testid="result"]`) とほとんど等価。
     const element = getByTestId('result');
