@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export function HiddenMessage({ children }) {
-  const [showMessage, setShowMessage] = useState(false);
+  const [showMessage, setShowMessage] = React.useState(false);
 
   return (
     <div>
