@@ -1,6 +1,10 @@
 import React from 'react';
 
-export function HiddenMessage({ children }) {
+type Props = {
+  children: React.ReactNode
+};
+
+export const HiddenMessage: React.VFC<Props> = ({ children }) => {
   const [showMessage, setShowMessage] = React.useState(false);
 
   return (

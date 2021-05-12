@@ -2,9 +2,10 @@
 // https://github.com/testing-library/jest-dom#custom-matchers
 import '@testing-library/jest-dom';
 
+import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
-import { HiddenMessage } from '../HiddenMessage';
+
+import { HiddenMessage } from '@/components/HiddenMessage';
 
 describe('HiddenMessage', () => {
   it('チェックボックスにチェックを入れたら props.children を表示する', () => {
