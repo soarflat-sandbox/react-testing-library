@@ -1,10 +1,13 @@
 import React from 'react';
+
 import { Counter } from '@/components/Counter';
 
-export default function App() {
+const App: React.VFC = () => {
   return (
     <>
       <Counter />
     </>
   );
-}
+};
+
+export default App;
