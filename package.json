@@ -8,7 +8,8 @@
     "lint": "eslint src __tests__ --ext ts --ext tsx",
     "format": "prettier --write .",
     "tsc": "tsc -p ./tsconfig.json --noEmit",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
