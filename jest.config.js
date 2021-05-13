@@ -3,4 +3,4 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   moduleFileExtensions: ['js', 'ts', 'tsx', 'json'],
-};
+}

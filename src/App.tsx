@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import { Counter } from '@/components/Counter';
-import { HiddenMessage } from '@/components/HiddenMessage';
+import { Counter } from '@/components/Counter'
+import { HiddenMessage } from '@/components/HiddenMessage'
 
 const App: React.VFC = () => {
   return (
@@ -11,7 +11,7 @@ const App: React.VFC = () => {
       <h2>HiddenMessage Component</h2>
       <HiddenMessage>Message</HiddenMessage>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

@@ -72,18 +72,18 @@ $ npm install --save-dev @testing-library/jest-dom
 
 ```js
 test('has correct welcome text', () => {
-  const wrapper = shallow(<Welcome firstName="John" lastName="Doe" />);
-  expect(wrapper.find('h1').text()).to.equal('Welcome, John Doe');
-});
+  const wrapper = shallow(<Welcome firstName="John" lastName="Doe" />)
+  expect(wrapper.find('h1').text()).to.equal('Welcome, John Doe')
+})
 ```
 
 ### React Testing Library
 
 ```js
 test('has correct welcome text', () => {
-  render(<Welcome firstName="John" lastName="Doe" />);
-  expect(screen.getByRole('heading')).toHaveTextContent('Welcome, John Doe');
-});
+  render(<Welcome firstName="John" lastName="Doe" />)
+  expect(screen.getByRole('heading')).toHaveTextContent('Welcome, John Doe')
+})
 ```
 
 ## 使い方

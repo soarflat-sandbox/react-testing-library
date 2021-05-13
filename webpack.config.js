@@ -1,5 +1,5 @@
-const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -37,4 +37,4 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist/'),
     hot: true,
   },
-};
+}

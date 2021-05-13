@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 type Props = {
   children: React.ReactNode
-};
+}
 
 export const HiddenMessage: React.VFC<Props> = ({ children }) => {
-  const [showMessage, setShowMessage] = React.useState(false);
+  const [showMessage, setShowMessage] = React.useState(false)
 
   return (
     <div>
@@ -13,10 +13,10 @@ export const HiddenMessage: React.VFC<Props> = ({ children }) => {
       <input
         id="toggle"
         type="checkbox"
-        onChange={e => setShowMessage(e.target.checked)}
+        onChange={(e) => setShowMessage(e.target.checked)}
         checked={showMessage}
       />
       {showMessage ? children : null}
     </div>
-  );
+  )
 }

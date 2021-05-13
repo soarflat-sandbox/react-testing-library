@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 export const Counter: React.VFC = () => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(0)
 
   return (
     <>
@@ -9,5 +9,5 @@ export const Counter: React.VFC = () => {
       <button onClick={() => setCount(count + 1)}>+</button>
       <button onClick={() => setCount(count - 1)}>-</button>
     </>
-  );
-};
+  )
+}
