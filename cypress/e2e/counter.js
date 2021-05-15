@@ -1,7 +1,9 @@
+import '@testing-library/cypress/add-commands'
+
 describe('Cypress', () => {
   it('is working', () => {
     cy.visit('/')
-    cy.get('#root > :nth-child(3)').click().click().click()
-    cy.get('[data-testid=result]').should('have.text', '3')
+    cy.findByText(/^\+/).click().click().click()
+    cy.findByTestId('result').should('have.text', '3')
   })
 })
