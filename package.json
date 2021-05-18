@@ -18,7 +18,7 @@
     "{src,__tests__}/**/*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "npm run lint",
-      "npm run test"
+      "jest --findRelatedTests"
     ]
   },
   "keywords": [],
