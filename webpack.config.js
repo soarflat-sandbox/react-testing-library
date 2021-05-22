@@ -36,5 +36,8 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist/'),
     hot: true,
+    // 存在しないパスにアクセスした場合、index.html を返却する
+    // React Router などの動的パスをリロードしても動作するようになる
+    historyApiFallback: true,
   },
 }
