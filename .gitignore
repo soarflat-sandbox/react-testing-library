@@ -1,4 +1,5 @@
-dist
+dist/*
+!mockServiceWorker.js
 node_modules
 coverage
 cypress/videos
